@@ -10,5 +10,3 @@ Führe das Skript aus
 ```shell
 python /tmp/scripts/script.py
 ```
-
-
