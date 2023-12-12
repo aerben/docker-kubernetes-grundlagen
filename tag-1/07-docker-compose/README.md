@@ -65,7 +65,7 @@ volumes:
 Navigieren wir im Terminal zu dem Verzeichnis, in dem sich die `docker-compose.yml`-Datei befindet, und führen den folgenden Befehl aus, um den Stack zu starten:
 
 ```sh
-docker-compose up -d
+docker compose up -d
 ```
 
 Dadurch werden die Services gestartet und die Container erstellt. Lassen wir den Stack einige Zeit laufen, bis die Container vollständig initialisiert sind.
@@ -142,7 +142,7 @@ Diese Änderungen fügen einen neuen Service `phpmyadmin` hinzu, der auf das off
 Navigieren wir im Terminal zu dem Verzeichnis, in dem sich die `docker-compose.yml`-Datei befindet, und führen den folgenden Befehl aus, um den Stack zu aktualisieren:
 
 ```sh
-docker-compose up -d
+docker compose up -d
 ```
 
 Warten Sie, bis der Stack aktualisiert wurde und der `phpmyadmin` Container vollständig initialisiert ist.
@@ -158,7 +158,7 @@ Nachdem Sie Ihre Arbeit mit Wordpress und php
 Wenn wir den Stack nicht mehr benötigen, navigieren wir zurück zum Terminal und führen im Verzeichnis, in dem sich die `docker-compose.yml`-Datei befindet, den folgenden Befehl aus:
 
 ```sh
-docker-compose down
+docker compose down
 ```
 
 Damit werden die laufenden Container entfernt und das Netzwerk aufgelöst. Beachte jedoch, dass die Volumes bestehen bleiben und erneut verwendet werden können, wenn wir den Stack später wieder starten sollten.
