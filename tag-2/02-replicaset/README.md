@@ -1,39 +1,38 @@
 # ReplicaSet
 
 Dieses Beispiel illustriert, welche Rolle ReplicaSets bei Kubernetes spielen. Die Ressource, die wir uns anschauen, ist in [manifest.yaml](manifest.yaml) definiert.
+Bitte auch hier wieder daran denken, mit PowerShell in das korrekte Verzeichnis zu wechseln.
 
-Führen die folgenden Schritte durch, um die Demo zu starten:
+Führe die folgenden Schritte durch, um die Demo zu starten:
 
-1. Erstelle das ReplicaSet:
+Erstelle das ReplicaSet mit dem Manifest:
 
 ```sh
 kubectl apply -f manifest.yaml
 ```
 
-2. Stelle sicher, dass alle Pods korrekt erstellt wurden:
+Das Manifest enthält ein `ReplicaSet` von drei NGINX-Pods. 
+Stelle sicher, dass alle Pods korrekt erstellt wurden:
 
 ```sh
 kubectl get pods --selector=app=replicaset-demo
 ```
 
-3. Lösche einen Pod
+Dieser Befehlt funktioniert so, wie er ist, weil alle pods das Label `app=replicaset-demo` tragen. Wenn du dir nicht sicher bist, warum das so ist, schau noch einmal in das Manifest. Dort wirst du das Label im Template finden.
+
+Lösche nun einen Pod:
 
 ```sh
-# kubectl delete pod <POD_NAME>
-# oder für bash-Profis um den ersten Pod zu löschen:
-kubectl get pods --selector=app=replicaset-demo \
-  --no-headers -o custom-columns=":metadata.name" \
-  | head -n1 \
-  | xargs kubectl delete pod
+kubectl delete pod <POD_NAME>
 ```
 
-4. Prüfe die Podliste erneut.
+Prüfe die Podliste erneut.
 
 ```sh
 kubectl get pods --selector=app=replicaset-demo 
 ```
 
-Das ReplicaSet sollte nun wieder einen dritten Pod angelegt haben.
+Das ReplicaSet sollte nun wieder einen dritten Pod angelegt haben. Falls nicht, musst du vielleicht ein paar Sekunden warten.
 
 # Aufräumen
 ```shell
