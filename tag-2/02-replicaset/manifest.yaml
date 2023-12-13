@@ -6,11 +6,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: replicaset-demo
+      app: replicaset-demo # Das ReplicaSet verwaltet alle Pods, die das Label "app=replicaset-demo" tragen. Wenn es nicht genug findet, legt es welche an.
   template:
     metadata:
       labels:
-        app: replicaset-demo
+        app: replicaset-demo # Dies bewirkt, dass jeder Pod das Label "app=replicaset-demo" tragen wird
     spec:
       containers:
         - name: nginx

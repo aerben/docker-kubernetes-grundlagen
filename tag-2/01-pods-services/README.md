@@ -61,3 +61,9 @@ kubectl delete pod/nginx-pod-1
 kubectl delete pod/nginx-pod-2
 ```
 
+## Bonus
+Wenn du schon fertig bist, sind hier noch Zusatzressourcen:
+
+- [Dokumentation zu Pods und Pod Lifecycles in Kubernetes](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/)
+- [Dokumentation zu Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/)
+

@@ -18,7 +18,7 @@ Stelle sicher, dass alle Pods korrekt erstellt wurden:
 kubectl get pods --selector=app=replicaset-demo
 ```
 
-Dieser Befehlt funktioniert so, wie er ist, weil alle pods das Label `app=replicaset-demo` tragen. Wenn du dir nicht sicher bist, warum das so ist, schau noch einmal in das Manifest. Dort wirst du das Label im Template finden.
+Dieser Befehlt funktioniert so, wie er ist, weil alle Pods das Label `app=replicaset-demo` tragen. Wenn du dir nicht sicher bist, warum das so ist, schau noch einmal in das Manifest. Dort wirst du das Label im Template finden.
 
 Lösche nun einen Pod:
 
@@ -34,7 +34,11 @@ kubectl get pods --selector=app=replicaset-demo
 
 Das ReplicaSet sollte nun wieder einen dritten Pod angelegt haben. Falls nicht, musst du vielleicht ein paar Sekunden warten.
 
-# Aufräumen
+## Aufräumen
 ```shell
 kubectl delete replicaset.apps/replicaset-demo
 ```
+
+## Bonus
+
+- [Dokumentation zu ReplicaSets](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)

@@ -67,3 +67,6 @@ Address: 10.244.0.64 # hier ist die Adresse des Pods!
 kubectl delete statefulset.apps/nginx
 kubectl delete service/nginx-headless
 ```
+
+## Bonus
+-[Dokumentation zu StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)

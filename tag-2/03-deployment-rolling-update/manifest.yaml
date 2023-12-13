@@ -7,8 +7,8 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 0
+      maxSurge: 1 # Gibt an, wie viele Pods bei einem Rollout zusätzlich gestartet werden können
+      maxUnavailable: 0 # Gibt an, wie hoch die Anzahl der Replicas beim Rollout unter dem normalen Wert sein darf
   selector:
     matchLabels:
       app: deployment-demo
