@@ -64,4 +64,3 @@ kubectl delete deployment.apps/deployment-demo
 ## Bonus
 
 - [Dokumentation zu Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
-- 
