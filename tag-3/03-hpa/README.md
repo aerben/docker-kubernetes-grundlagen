@@ -44,6 +44,7 @@ Es ist wichtig, dass bei TARGETS nicht "unknown" steht, sondern zwei Prozentzahl
 NAME        REFERENCE                     TARGETS   MINPODS   MAXPODS   REPLICAS   AGE
 nginx-hpa   ReplicaSet/nginx-replicaset   0%/50%    3         10        3          2m24s
 ```
+Wenn dies noch nicht der Fall ist, dann ist der Metrics-Server noch nicht bereit. Das kann tatsächlich mehrere Minuten dauern.
 
 ## Lasttest
 
@@ -53,7 +54,7 @@ Wir wollen nun die Probe aufs Exempel machen und prüfen, ob das Autoscaling wir
 - Im zweiten Fenster lassen wir einen Lasttest laufen: 
 
 ```shell
-kubectl run -i --tty --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.001; do wget -q -O- http://nginx-service; done"
+kubectl run -i --tty loadtest --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.0001; do wget -q -O- http://nginx-service; done"
 ```
 
 Beobachtet nun im ersten Fenster die Statistik des HPA. Mit der Zeit wird die CPU-Auslastung steigen und irgendwann auch die Replica-Zahl steigen.

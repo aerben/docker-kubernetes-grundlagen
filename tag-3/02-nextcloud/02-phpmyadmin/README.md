@@ -7,7 +7,7 @@ In diesem Verzeichnis liegt ein Manifest, dass PhpMyAdmin sowie einen NodePort-S
 kubectl apply -f pma.yaml
 ```
  
-Prüft nun wieder mit kubectl, ob Deployment und Service erfolgreich angelegt wurden.
+Prüft nun mit kubectl, ob Deployment und Service erfolgreich angelegt wurden.
 Tunnelt euch nun zu PhpMyAdmin, indem ihr 
 
 ```shell

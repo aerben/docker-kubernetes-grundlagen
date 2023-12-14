@@ -19,4 +19,6 @@ Als Nächstes legen wir die Datenbank an. Sie ist als StatefulSet modelliert und
 kubectl apply -f db.yaml
 ```
 
-Um nachzuvollziehen, was wir angelegt haben, bitte ich euch, mit kubectl alle StatefulSets aufzulisten sowie alle Services. Prüft, ob der Pod für die Datenbank erfolgreich gestartet wurde. Lasst euch mit `kubectl logs` die Logs für den Pod ausgeben. Prüft daraufhin auch, ob der Service für die Datenbank (der übrigens headless ist) existiert. In der nächsten Aufgabe werden wir dann mit PhpMyAdmin prüfen, ob die Datenbank auch wirklich funktioniert.
+Um nachzuvollziehen, was wir angelegt haben, bitte ich euch, mit kubectl alle StatefulSets aufzulisten sowie alle Services. Prüft, ob der Pod für die Datenbank erfolgreich gestartet wurde. Das kann etwas dauern!
+
+Lasst euch mit `kubectl logs` die Logs für den Pod ausgeben. Prüft daraufhin auch, ob der Service für die Datenbank (der übrigens headless ist) existiert. In der nächsten Aufgabe werden wir dann mit PhpMyAdmin prüfen, ob die Datenbank auch wirklich funktioniert.
