@@ -50,7 +50,7 @@ Wenn dies noch nicht der Fall ist, dann ist der Metrics-Server noch nicht bereit
 
 Wir wollen nun die Probe aufs Exempel machen und prüfen, ob das Autoscaling wirklich funktioniert. Am besten macht ihr dafür nun zwei Powershell-Sitzungen auf:
 
-- In der ersten Sitzung führt ihr den Befehl `kubectl get hpa -w` aus. Dadurch könnt ihr kontinuierlich sehen, wieviele Pods laufen.
+- In der ersten Sitzung führt ihr den Befehl `kubectl get hpa -w` aus. Dadurch könnt ihr kontinuierlich sehen, wie viele Pods laufen.
 - Im zweiten Fenster lassen wir einen Lasttest laufen: 
 
 ```shell
