@@ -25,30 +25,25 @@
 * `docker logs <container>`: Zeigt die Logs eines Docker-Containers an.
 * `docker exec -it <container> <command>`: Führt einen Befehl in einem laufenden Docker-Container aus.
 
-### Tagging
+### Image Tagging
 
 * `docker pull <image>:<tag>`: Lädt ein Docker-Image mit einem bestimmten Tag aus der Docker-Registry herunter. Wenn kein Tag angegeben ist, wird standardmäßig der Tag `latest` verwendet.
 * `docker tag <source_image>:<source_tag> <target_image>:<target_tag>`: Erstellt einen neuen Tag für ein vorhandenes Docker-Image. Wenn kein `source_tag` angegeben ist, wird standardmäßig der Tag `latest` verwendet.
 * `docker push <image>:<tag>`: Lädt ein getaggtes Docker-Image in die Docker-Registry hoch. Wenn kein Tag angegeben ist, wird standardmäßig der Tag `latest` verwendet.
 * `docker rmi <image>:<tag>`: Löscht ein getaggtes Docker-Image. Wenn kein Tag angegeben ist, wird standardmäßig der Tag `latest` verwendet.
 
-## Docker-Compose Befehle
-
-### Grundlegende Befehle
+### Docker Compose-Befehle
 
 * `docker compose --version`: Zeigt die installierte Docker-Compose-Version an.
 * `docker compose up`: Erstellt und startet alle Services, die in der `docker-compose.yml`-Datei definiert sind.
 * `docker compose down`: Stoppt und entfernt alle Services, die in der `docker-compose.yml`-Datei definiert sind.
-
-### Services
-
 * `docker compose ps`: Listet alle Services auf, die in der `docker-compose.yml`-Datei definiert sind.
 * `docker compose start <service>`: Startet einen bestimmten Service.
 * `docker compose stop <service>`: Stoppt einen bestimmten Service.
 * `docker compose logs <service>`: Zeigt die Logs eines bestimmten Services an.
 * `docker compose exec <service> <command>`: Führt einen Befehl in einem laufenden Service aus.
 
-### Docker-Compose-Datei
+### Docker Compose-Datei
 
 Die `docker-compose.yml`-Datei ist eine YAML-Datei, die die Services, Netzwerke und Volumes für eine Docker-Anwendung definiert. Hier ist ein einfaches Beispiel:
 
