@@ -37,7 +37,7 @@ kubectl delete configmap my-config
 
 #### Deklarative Methode
 
-Die Datei [declarative-config.yaml]() enthält die gleiche ConfigMap, die wir oben angelegt haben, als YAML. Wir können sie direkt mit kubectl anwenden.
+Die Datei [declarative-config.yaml](declarative-config.yaml) enthält die gleiche ConfigMap, die wir oben angelegt haben, als YAML. Wir können sie direkt mit kubectl anwenden.
 
 ```bash
 kubectl apply -f declarative-config.yaml
@@ -57,7 +57,7 @@ kubectl delete configmap my-config
 
 ## Übung 2: Verwenden einer ConfigMap in einem Pod
 
-Die Datei [config-pod.yaml]() enthält die Deklarationen einer ConfigMap sowie einen Pod. Dieser loggt das `env` aus und stoppt danach. Wir können das Ergebnis in den Logs sehen.
+Die Datei [config-pod.yaml](config-pod.yaml) enthält die Deklarationen einer ConfigMap sowie einen Pod. Dieser loggt das `env` aus und stoppt danach. Wir können das Ergebnis in den Logs sehen.
 
 ```bash
 kubectl apply -f config-pod.yaml
@@ -79,7 +79,7 @@ kubectl delete configmap my-config
 
 ## Übung 3: Mappen von ConfigMap-Werten auf Volumen
 
-Die Datei [volume-pod.yaml]() enthält eine ConfigMap, die per Volume in einen Pod gemountet wird. Wie im vorletzten Beispiel wird das Ergebnis geloggt, aber der Container wartet einige Zeit, bis er stoppt. Wir können ihn also mit exec untersuchen.
+Die Datei [volume-pod.yaml](volume-pod.yaml) enthält eine ConfigMap, die per Volume in einen Pod gemountet wird. Wie im vorletzten Beispiel wird das Ergebnis geloggt, aber der Container wartet einige Zeit, bis er stoppt. Wir können ihn also mit exec untersuchen.
 
 Anwenden der Datei:
 
@@ -96,7 +96,7 @@ kubectl exec -it volume-pod -- ls /etc/config
 kubectl exec -it volume-pod -- cat /etc/config/key1
 ```
 
-Im ersten Fall sehr ihr alle Dateien, die angelegt wurden im Rahmen des Mountens. Der zweite Befehl gibt mit `cat` den Inhalt der Datei `key1` aus, welche den ersten Konfigurationswert enthält.
+Im ersten Fall seht ihr alle Dateien, die angelegt wurden im Rahmen des Mountens. Der zweite Befehl gibt mit `cat` den Inhalt der Datei `key1` aus, welche den ersten Konfigurationswert enthält.
 
 Haltet jetzt noch einmal einen moment inne und führt euch vor Augen, dass Kubernetes dem Pod für jede Schlüssel-Wert-Kombination in der ConfigMap eine Datei zur Verfügung stellt. Die Dateien enthalten jeweils die in der ConfigMap genannten Werte.
 
@@ -105,3 +105,8 @@ Aufräumen:
 kubectl delete configmap/my-config
 kubectl delete pod/volume-pod
 ```
+
+### Bonus:
+
+- [](https://kubernetes.io/docs/concepts/configuration/configmap/)
+- [](https://kubernetes.io/docs/concepts/configuration/secret/)
